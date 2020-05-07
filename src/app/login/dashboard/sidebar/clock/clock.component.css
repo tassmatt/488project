@@ -1,0 +1,14 @@
+#clock{
+    margin-bottom: .5em;
+    text-decoration: none;
+    font-size: 42px;
+    color: white;
+    display: block;
+    text-align: center;
+
+    /* prevents highlighting text */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

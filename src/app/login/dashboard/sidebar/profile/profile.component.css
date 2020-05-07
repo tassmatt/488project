@@ -1,0 +1,36 @@
+.card {
+    text-align: center;
+    width: 90%;
+    margin-left: 5%;
+}
+
+h4 {
+    margin-top: -10px;
+
+    /* prevents highlighting text */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h5 {
+    margin-top: 20px;
+
+    /* prevents highlighting text */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    margin-top: 25px;
+    margin-right: 10px;
+
+    /* prevents highlighting text */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">To Do</h5>
+    <input type="text" #inputBox id="input" placeholder="Task Name">
+    <span (click)="onAddTask(inputBox.value)" class="addBtn">+</span>
+
+    <ul class="list-group list-group-flush" id="toDoList">
+      <li class="list-group-item" *ngFor="let task of tasks, let i = index">
+        <button type="button" class="btn btn-secondary btn-sm" (click)="onDeleteTask(i)">X</button> {{tasks[i].task}} 
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  
