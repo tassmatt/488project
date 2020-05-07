@@ -1,3 +1,28 @@
-<p>
-  inventory works!
-</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Item ID</th>
+      <th scope="col">Item Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Location</th>
+      <th scope="col">Recieved Date</th>
+      <th scope="col">To Be Stocked</th>
+      <th scope="col">Quantity Checked</th>
+      <th scope="col">Restock Ordered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of this.inventoryServices.items; let i = index">
+      <td> <span class="badge badge-dark">Edit</span> </td>
+      <th scope="row">{{this.inventoryServices.items[i].itemID}}</th>
+      <td>{{this.inventoryServices.items[i].itemName}}</td>
+      <td>{{this.inventoryServices.items[i].quantity}}</td>
+      <td>{{this.inventoryServices.items[i].location}}</td>
+      <td>{{this.inventoryServices.items[i].receiveDate}}</td>
+      <td>{{this.inventoryServices.items[i].toBeStocked}}</td>
+      <td>{{this.inventoryServices.items[i].quantityChecked}}</td>
+      <td>{{this.inventoryServices.items[i].restockOrdered}}</td>
+    </tr>
+  </tbody>
+</table>
