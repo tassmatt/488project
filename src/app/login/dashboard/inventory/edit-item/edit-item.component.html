@@ -1,0 +1,50 @@
+<form>
+  <title class="title">Item Editor</title>
+  <div class="form-group">
+    <label for="itemID">Item ID</label> 
+    <input type="number" class="form-control" id="itemID" value="{{item.itemID}}" #box1>
+  </div>
+
+  <div class="form-group">
+    <label for="itemName">Item Name</label>
+    <input #itemNameBox type="text" class="form-control" id="itemName" value="{{item.itemName}}" #box2>
+  </div>
+
+  <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input #quantityBox type="number" class="form-control" id="quantity" value="{{item.quantity}}" #box3>
+  </div>
+
+  <div class="form-group">
+    <label for="location">Location</label>
+    <input #locationBox type="text" class="form-control" id="location" value="{{item.location}}" #box4>
+  </div>
+
+  <div class="form-group">
+    <label for="receivedDate">Received Date</label>
+    <input #receivedDateBox type="text" class="form-control" id="receivedDate" value="{{item.receiveDate}}" #box5>
+  </div>
+
+  <div class="form-group">
+    <label for="toBeStocked">To Be Stocked</label>
+    <input #toBeStockedBox type="text" class="form-control" id="toBeStocked" value="{{item.toBeStocked}}" placeholder="Leave blank for 'No'" #box6>
+  </div>
+
+  <div class="form-group">
+    <label for="quantityChecked">Quantity Checked</label>
+    <input #quantityCheckedBox type="text" class="form-control" id="quantityChecked" value="{{item.quantityChecked}}" placeholder="Leave blank for 'No'" #box7>
+  </div>
+
+  <div class="form-group">
+    <label for="restockOrdered">Restock Ordered</label>
+    <input #restockedOrderedBox type="text" class="form-control" id="restockOrdered" value="{{item.restockOrdered}}" placeholder="Leave blank for 'No'" #box8>
+  </div>
+
+  <!-- Buttons -->
+  <div id="buttonGrp">
+    <button type="button" class="btn btn-primary" (click)="this.inventoryServices.updateItem(box1.value, box2.value, box3.value, box4.value, box5.value, box6.value, box7.value, box8.value)">Save Changes</button>
+    <button type="button" class="btn btn-danger" (click)="this.inventoryServices.deleteItem()">Delete Item</button>
+    <button type="button" class="btn btn-secondary" id="cancelBtn" (click)="this.inventoryServices.toggleEditor('display')">Cancel</button>
+  </div>
+
+</form>

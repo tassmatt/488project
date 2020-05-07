@@ -5,24 +5,24 @@ export type EditorType = 'loggedOut' | 'loggedIn'
 @Injectable()
 export class UserService{
 
-    users = [
-        {
-            userName: 'john.doe',
-            firstName: 'John',
-            lastName: 'Doe',
-            password: 'password1'
-        },
-        {
-            userName: 'jane.doe',
-            firstName: 'Jane',
-            lastName: 'Doe',
-            password: 'password2'
-        }
-    ];
+  users = [
+    {
+      userName: 'john.doe',
+      firstName: 'John',
+      lastName: 'Doe',
+      password: 'password1'
+    },
+    {
+      userName: 'jane.doe',
+      firstName: 'Jane',
+      lastName: 'Doe',
+      password: 'password2'
+    }
+  ];
 
-    currentUser = {userName: '', firstName: '', lastName: '', password: ''}; 
+  currentUser = {userName: '', firstName: '', lastName: '', password: ''}; 
 
-    editor: EditorType = 'loggedOut';
+  editor: EditorType = 'loggedOut';
 
   constructor() {}
 
@@ -40,10 +40,10 @@ export class UserService{
 
   setCurrentUser(userNam, passwrd){
     for(var user of this.users){
-        if(userNam == user.userName && passwrd == user.password){
-            this.currentUser = user;
-            this.toggleEditor('loggedIn');
-        }
+      if(userNam == user.userName && passwrd == user.password){
+        this.currentUser = user;
+        this.toggleEditor('loggedIn');
+      }
     }
   }
 

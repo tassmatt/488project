@@ -16,6 +16,7 @@ import { ListComponent } from './login/dashboard/sidebar/list/list.component';
 import { TaskService } from './task.service';
 import { InventoryService } from './inventory.service';
 import { UserService } from './user.service';
+import { EditItemComponent } from './login/dashboard/inventory/edit-item/edit-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { UserService } from './user.service';
     ProfileComponent,
     ClockComponent,
     CalendarComponent,
-    ListComponent
+    ListComponent,
+    EditItemComponent
   ],
   imports: [
     BrowserModule,

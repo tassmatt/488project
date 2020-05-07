@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table" *ngIf="this.inventoryServices.showDisplayTable">
   <thead class="thead-dark">
     <tr>
       <th scope="col"></th>
@@ -6,7 +6,7 @@
       <th scope="col">Item Name</th>
       <th scope="col">Quantity</th>
       <th scope="col">Location</th>
-      <th scope="col">Recieved Date</th>
+      <th scope="col">Received Date</th>
       <th scope="col">To Be Stocked</th>
       <th scope="col">Quantity Checked</th>
       <th scope="col">Restock Ordered</th>
@@ -14,7 +14,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let item of this.inventoryServices.items; let i = index">
-      <td> <span class="badge badge-dark">Edit</span> </td>
+      <td> <span class="badge badge-dark" (click)="onEditClick(i)">Edit</span> </td>
       <th scope="row">{{this.inventoryServices.items[i].itemID}}</th>
       <td>{{this.inventoryServices.items[i].itemName}}</td>
       <td>{{this.inventoryServices.items[i].quantity}}</td>
@@ -25,4 +25,9 @@
       <td>{{this.inventoryServices.items[i].restockOrdered}}</td>
     </tr>
   </tbody>
+</table>
+  
+
+<table class="table"  *ngIf="this.inventoryServices.showEditItem">
+  <app-edit-item></app-edit-item>
 </table>
