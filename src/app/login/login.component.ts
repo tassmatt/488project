@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  failedLoginText = '';
+
+  constructor(private userServices: UserService) {}
 
   ngOnInit() {
+  }
+
+  onLoginButtonClick(uN, pW){
+    for(var user of this.userServices.users){
+      if(uN == user.userName && pW == user.password){
+        this.userServices.setCurrentUser(uN, pW);
+      }
+      else{
+        this.failedLoginText = 'Incorrect Credentials';
+      }
+    }
   }
 
 }

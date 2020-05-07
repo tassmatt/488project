@@ -1,4 +1,4 @@
-.card{
+.card {
     /* margin: 6em; */
     height: 600px;
     width: 500px;
@@ -6,15 +6,21 @@
     margin-top: 100px;
 }
 
-.card-header{
+.card-header {
     font-size: xxx-large;
     font-weight: bold;
 }
 
-h5{
+h5 {
     margin-top: 50px;
 }
 
-a{
+button {
     margin-top: 25px;
+}
+
+p {
+    color: red;
+    font-weight: bold;
+    margin: 0;
 }

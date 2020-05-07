@@ -1,18 +1,18 @@
-<!-- Side navigation -->
-<div class="sidenav">
-  <app-sidebar></app-sidebar>
-</div>
+<app-login *ngIf="checkLoggedOut"></app-login>
 
-<!-- Page content -->
-<div class="main">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4"> {{title}} </h1>
-      <p class="lead"></p>
+<div *ngIf="checkLoggedIn">
+  <!-- Side navigation -->
+  <div class="sidenav">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <!-- Page content -->
+  <div class="main">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4"> {{title}} </h1>
+        <p class="lead"></p>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- <app-login></app-login> -->
-
-<!-- <app-sidebar></app-sidebar> -->

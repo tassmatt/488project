@@ -1,14 +1,9 @@
-<!-- <p>
-  profile works!
-</p> -->
-
-
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">FirstName</h4>
-    <h4 class="card-title">LastName</h4>
-    <h5 class="card-subtitle mb-2 text-muted">UserName</h5>
-    <a href="#" class="btn btn-dark">Settings</a>
-    <a href="#" class="btn btn-dark">Logout</a>
+    <h4 class="card-title"> {{this.userServices.currentUser.firstName}} </h4>
+    <h4 class="card-title"> {{this.userServices.currentUser.lastName}} </h4>
+    <h5 class="card-subtitle mb-2 text-muted"> {{this.userServices.currentUser.userName}} </h5>
+    <button class="btn btn-dark">Settings</button>
+    <button class="btn btn-dark" (click)="onLogoutClick()" >Logout</button>
   </div>
 </div>

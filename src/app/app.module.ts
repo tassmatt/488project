@@ -15,6 +15,7 @@ import { CalendarComponent } from './login/dashboard/sidebar/calendar/calendar.c
 import { ListComponent } from './login/dashboard/sidebar/list/list.component';
 import { TaskService } from './task.service';
 import { InventoryService } from './inventory.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { InventoryService } from './inventory.service';
     FormsModule,
     HttpModule
   ],
-  providers: [TaskService, InventoryService],
+  providers: [TaskService, InventoryService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

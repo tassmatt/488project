@@ -2,20 +2,22 @@
   <div class="card-header">
     InvManagement
   </div>
+
   <div class="card-body">
 
+    <!-- Username field -->
     <h5 class="card-title">Username</h5>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+      <input #userNameBox type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
     </div>
 
+    <!-- Password field -->
     <h5 class="card-title">Password</h5>
     <div class="input-group mb-3">
-      <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+      <input #passwordBox type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
     </div>
-    <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <a href="#" class="btn btn-primary btn-lg">Login</a>
+    <!-- Login button -->
+    <button class="btn btn-primary btn-lg" (click)="onLoginButtonClick(userNameBox.value, passwordBox.value)">Login</button>
   </div>
-  <div class="card-footer">
-  </div>
+  <div class="card-footer"> <p> {{failedLoginText}} </p> </div>
 </div>
