@@ -8,7 +8,7 @@ tbody {
     margin-left: 2.5%;
 }
 
-td {
+td, th {
     /* prevents highlighting text  */
     -webkit-user-select: none;
     -moz-user-select: none;

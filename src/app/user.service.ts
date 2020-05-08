@@ -20,6 +20,7 @@ export class UserService{
     }
   ];
 
+  // Used for the Profile Component data binding
   currentUser = {userName: '', firstName: '', lastName: '', password: ''}; 
 
   editor: EditorType = 'loggedOut';
@@ -47,6 +48,7 @@ export class UserService{
     }
   }
 
+  // Resets the currentUser
   emptyCurrentUser(){
     this.currentUser = {userName: '', firstName: '', lastName: '', password: ''};
     this.toggleEditor('loggedOut');

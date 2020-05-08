@@ -3,6 +3,7 @@
 
   <title class="title">Item Editor</title>
 
+  <!-- The input boxes -->
   <div class="form-group">
     <label for="itemID">Item ID</label> 
     <input type="number" class="form-control" id="itemID" value="{{item.itemID}}" #box1>
@@ -58,8 +59,9 @@
 <!-- Shows the Add New Item fields -->
 <form *ngIf="this.inventoryServices.showAddItem">
 
-  <title class="title">Item Editor</title>
+  <title class="title">Add Item</title>
 
+  <!-- The input boxes -->
   <div class="form-group">
     <label for="itemID">Item ID</label> 
     <input type="number" class="form-control" id="itemID" #box1>

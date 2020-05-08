@@ -1,4 +1,5 @@
 <div class="card text-center" #card>
+  
   <div class="card-header">
     InvManagement
   </div>
@@ -16,8 +17,13 @@
     <div class="input-group mb-3">
       <input #passwordBox type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+
     <!-- Login button -->
     <button class="btn btn-primary btn-lg" (click)="onLoginButtonClick(userNameBox.value, passwordBox.value)">Login</button>
+
   </div>
+
+  <!-- Feedback for incorrect input -->
   <div class="card-footer"> <p> {{failedLoginText}} </p> </div>
+
 </div>

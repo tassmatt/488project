@@ -126,14 +126,16 @@ export class InventoryService {
   }
 
   updateItem(a, b, c, d, e, f, g, h){
-    this.items[this.itemIndex].itemID = a;
-    this.items[this.itemIndex].itemName = b;
-    this.items[this.itemIndex].quantity = c;
-    this.items[this.itemIndex].location = d;
-    this.items[this.itemIndex].receiveDate = e;
-    this.items[this.itemIndex].toBeStocked = f;
-    this.items[this.itemIndex].quantityChecked = g;
-    this.items[this.itemIndex].restockOrdered = h;
+    this.items[this.itemIndex] = {
+      itemID: a,
+      itemName: b,
+      quantity: c,
+      location: d,
+      receiveDate: e,
+      toBeStocked: f,
+      quantityChecked: g,
+      restockOrdered: h
+    };
 
     this.toggleEditor('display');
   }
