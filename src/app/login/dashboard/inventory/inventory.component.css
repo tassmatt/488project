@@ -1,0 +1,26 @@
+table {
+    width: 95%;
+    margin-left: 2.5%;
+} 
+
+tbody {
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+td, th {
+    /* prevents highlighting text  */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+.form {
+    width: 95%;
+    margin-left: 2.5%;
+}

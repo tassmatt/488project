@@ -22,13 +22,8 @@ export class ClockComponent implements OnInit {
       hours = (time.getHours() - 12).toString();
       ampm = "PM";
     }
-
-
-    // ------ Sets the 0 placeholders when the hour/minute/seconds are single digits ------
-    // if (hours.length < 2) {
-    //     hours = '0' + hours;
-    //   }
   
+    // Sets the 0 placeholder if the section is single digit
     if (minutes.length < 2) {
       minutes = '0' + minutes;
     }
@@ -36,8 +31,6 @@ export class ClockComponent implements OnInit {
     if (seconds.length < 2) {
       seconds = '0' + seconds;
     }
-    // -------------
-
 
     this.clockString = hours + ":" + minutes + ":" + seconds + " " + ampm;
   }

@@ -29,6 +29,10 @@
   .main {
     margin-left: 20%; /* Same as the width of the sidebar */
   }
+
+  .jumbotron {
+    text-align: center;
+  }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {

@@ -1,6 +1,7 @@
 <app-login *ngIf="checkLoggedOut"></app-login>
 
 <div *ngIf="checkLoggedIn">
+  
   <!-- Side navigation -->
   <div class="sidenav">
     <app-sidebar></app-sidebar>
@@ -11,8 +12,13 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4"> {{title}} </h1>
-        <p class="lead"></p>
       </div>
     </div>
+
+    <!-- Inventory table -->
+    <div>
+      <app-inventory></app-inventory>
+    </div>
+
   </div>
 </div>
