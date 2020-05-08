@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 
-export type EditorType = 'display' | 'edit';
+export type EditorType = 'display' | 'edit' | 'add';
 
 @Injectable()
 export class InventoryService {
 
   items = [
     {
-      itemID: 1,
+      itemID: 349,
       itemName: 'Shampoo',
       quantity: 512,
       location: 'AB02',
@@ -17,7 +17,7 @@ export class InventoryService {
       restockOrdered: ''
     },
     {
-      itemID: 2,
+      itemID: 6745,
       itemName: 'Toothpaste',
       quantity: 384,
       location: 'JD13',
@@ -27,7 +27,7 @@ export class InventoryService {
       restockOrdered: ''
     },
     {
-      itemID: 3,
+      itemID: 392,
       itemName: 'Pizza',
       quantity: 100,
       location: 'HD04',
@@ -37,7 +37,7 @@ export class InventoryService {
       restockOrdered: ''
     },
     {
-      itemID: 4,
+      itemID: 49,
       itemName: 'Bottled Water',
       quantity: 0,
       location: 'AA02',
@@ -47,7 +47,7 @@ export class InventoryService {
       restockOrdered: 'Yes'
     },
     {
-      itemID: 5,
+      itemID: 6489,
       itemName: 'Beyblades',
       quantity: 0,
       location: 'CC11',
@@ -57,7 +57,7 @@ export class InventoryService {
       restockOrdered: 'Yes'
     },
     {
-      itemID: 6,
+      itemID: 2278,
       itemName: 'Keychains',
       quantity: 65,
       location: 'HG13',
@@ -67,7 +67,7 @@ export class InventoryService {
       restockOrdered: ''
     },
     {
-      itemID: 7,
+      itemID: 966,
       itemName: 'Energy Drinks',
       quantity: 0,
       location: 'AC03',
@@ -97,6 +97,10 @@ export class InventoryService {
 
   get showEditItem(){
     return this.editor === 'edit';
+  }
+
+  get showAddItem(){
+    return this.editor === 'add';
   }
 
   get showDisplayTable(){
@@ -134,4 +138,19 @@ export class InventoryService {
     this.toggleEditor('display');
   }
 
+  addItem(a, b, c, d, e, f, g, h){
+    this.itemToEdit = {
+      itemID: a,
+      itemName: b,
+      quantity: c,
+      location: d,
+      receiveDate: e,
+      toBeStocked: f,
+      quantityChecked: g,
+      restockOrdered: h
+    };
+
+    this.items.push(this.itemToEdit);
+    this.toggleEditor('display');
+  }
 }

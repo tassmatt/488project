@@ -28,4 +28,8 @@ export class InventoryComponent implements OnInit {
     this.inventoryServices.toggleEditor('edit');
     this.inventoryServices.setItemToEdit(i);
   }
+
+  onAddClick(){
+    this.inventoryServices.toggleEditor('add');
+  }
 }

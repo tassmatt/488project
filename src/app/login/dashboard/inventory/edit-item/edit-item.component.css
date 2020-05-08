@@ -10,3 +10,9 @@ button {
 #cancelBtn {
     margin-left: 4em;
 }
+
+label {
+    margin-top: 1.5em;
+    font-size: x-large;
+    font-weight: bold;
+}

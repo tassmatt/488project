@@ -1,7 +1,7 @@
 <table class="table table-striped table-hover" *ngIf="this.inventoryServices.showDisplayTable">
   <thead class="thead-dark">
     <tr>
-      <th scope="col"></th>
+      <th scope="col"> <span class="badge badge-light" (click)="onAddClick()">+</span> </th>
       <th scope="col">Item ID</th>
       <th scope="col">Item Name</th>
       <th scope="col">Quantity</th>
@@ -29,5 +29,9 @@
 </table>
 
 <div class="form" *ngIf="this.inventoryServices.showEditItem">
+  <app-edit-item></app-edit-item>
+</div>
+
+<div class="form" *ngIf="this.inventoryServices.showAddItem">
   <app-edit-item></app-edit-item>
 </div>
